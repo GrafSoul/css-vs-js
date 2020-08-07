@@ -1,0 +1,130 @@
+@import "settings";
+
+body {
+    background-color: $color-bg;
+}
+
+.slider {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider__target  {
+    display: none;
+}
+
+.slider__viewport {
+    width: 500px;
+    height:300px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider__container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    transition: left .5s;
+}
+
+.slider__item {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    list-style: none;
+    font-size: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.slider__item img {
+    margin: 0;
+    padding: 0;
+}
+
+.slider__controls {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.slider__control {
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    background: #ccc;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+p#test:target {
+    background: red;
+}
+
+.slider__arrow {
+    text-decoration: none;
+    position: absolute;
+    width: 50px;
+    height:50px;
+    top: 40%;
+    transform: translateY(-50%);
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:before {
+        display: block;
+        font-size: 50px;
+        padding: 0;
+        color: #e4e4e4;
+        text-shadow: 1px 1px 3px rgba(0,0,0, .3);
+    }
+
+    &_next {
+        right: 0;
+
+        &:before {
+            content: '>'
+        }
+    }
+
+    &_prev {
+        left: 20px;
+
+        &:before {
+            content: '<'
+
+        }
+
+    }
+}
+
+.slider__arrows-container {
+    display: none;
+}
+
+@for $i from 0 through 4 {
+
+    $nth: $i + 1;
+
+    #target_#{$nth}:target ~ .slider__viewport  .slider__container {
+        left: $i * -500px;
+    }
+
+    #target_#{$nth}:target ~ .slider__controls [href="#target_#{$nth}"] {
+        background: red;
+    }
+
+    #target_#{$nth}:target ~ .slider__prev-next .slider__arrows-container:nth-child(#{$nth}) {
+        display: block;
+    }
+
+}
+

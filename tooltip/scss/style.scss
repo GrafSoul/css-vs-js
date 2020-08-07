@@ -1,0 +1,38 @@
+@import "settings";
+
+body {
+    background-color: $color-bg;
+}
+
+[data-tooltip] {
+    position: relative;
+    display: inline;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:before {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        transform: translateX(-50px);
+        background: #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: #fff;
+        white-space: nowrap;
+        opacity: 1;
+        left: -9999px;
+        transition: opacity .3s;
+    }
+
+    &:hover {
+        &:before {
+            left: -70%;
+            opacity: 1;
+        }
+    }
+}
+
+.text {
+    margin-top: 50px;
+}

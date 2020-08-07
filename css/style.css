@@ -1,0 +1,12 @@
+body {
+  background-color: white; }
+
+header {
+  margin: 30px 0; }
+
+ul {
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnNjc3MiLCJfc2V0dGluZ3Muc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLHdCQ0hZLEVESWY7O0FBRUQ7RUFDSSxlQUFjLEVBQ2pCOztBQUVEO0VBQ0ksaUJBQWdCO0VBQ2hCLFdBQVU7RUFDVixpQkFBZ0IsRUFDbkIiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCBcInNldHRpbmdzXCI7XHJcblxyXG5ib2R5IHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICRjb2xvci1iZztcclxufVxyXG5cclxuaGVhZGVyIHtcclxuICAgIG1hcmdpbjogMzBweCAwO1xyXG59XHJcblxyXG51bCB7XHJcbiAgICBtYXJnaW46IDMwcHggMCAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbn1cclxuIiwiJGNvbG9yLWJnOiB3aGl0ZTtcclxuIl19 */

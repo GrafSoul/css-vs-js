@@ -1,0 +1,54 @@
+@import "settings";
+
+body {
+    background-color: $color-bg;
+}
+
+#modal-controller {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.popup__overlay {
+    position: fixed;
+    top: 0;
+    left: -9999px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .4s
+}
+
+.popup__overlay-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, .5);
+}
+
+#modal-controller:checked ~ .popup__overlay {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.popup__controller {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+}
+
+.popup__close {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
